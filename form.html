@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrazione Temperature</title>
+</head>
+<body>
+    <h1>Registrazione Temperature</h1>
+    
+    <form action="index.php" method="POST">
+        <table>
+            <tr>
+                <td><label for="localita">Località:</label></td>
+                <td><input type="text" id="localita" name="localita" required></td>
+            </tr>
+            <tr>
+                <td><label for="data">Data:</label></td>
+                <td><input type="date" id="data" name="data" required></td>
+            </tr>
+            <tr>
+                <td><label for="temperatura_min">Temperatura Minima (°C):</label></td>
+                <td><input type="number" id="temperatura_min" name="temperatura_min" step="0.1" required></td>
+            </tr>
+            <tr>
+                <td><label for="temperatura_max">Temperatura Massima (°C):</label></td>
+                <td><input type="number" id="temperatura_max" name="temperatura_max" step="0.1" required></td>
+            </tr>
+            <tr>
+                <td><label for="umidita">Umidità:</label></td>
+                <td>
+                    <select id="umidita" name="umidita" required>
+                        <option value="">Seleziona...</option>
+                        <option value="ASSOLUTA">ASSOLUTA</option>
+                        <option value="RELATIVA">RELATIVA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="valore_umidita">Valore Umidità (%):</label></td>
+                <td><input type="number" id="valore_umidita" name="valore_umidita" min="0" max="100" required></td>
+            </tr>
+            <tr>
+                <td><label for="clima_attuale">Clima Attuale:</label></td>
+                <td>
+                    <select id="clima_attuale" name="clima_attuale" required>
+                        <option value="">Seleziona...</option>
+                        <option value="PIOGGIA">PIOGGIA</option>
+                        <option value="SERENO">SERENO</option>
+                        <option value="VENTOSO">VENTOSO</option>
+                        <option value="UMIDO">UMIDO</option>
+                        <option value="FOSCHIA">FOSCHIA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Registra Temperature">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
