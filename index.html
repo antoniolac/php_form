@@ -2,12 +2,12 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Registrazione Temperature</title>
+    
 </head>
 <body>
     <h1>Registrazione Temperature</h1>
     
-    <form action="index.php" method="POST">
+    <form action="gestione.php" method="POST">
         <table>
             <tr>
                 <td><label for="localita">Località:</label></td>
@@ -29,7 +29,6 @@
                 <td><label for="umidita">Umidità:</label></td>
                 <td>
                     <select id="umidita" name="umidita" required>
-                        <option value="">Seleziona...</option>
                         <option value="ASSOLUTA">ASSOLUTA</option>
                         <option value="RELATIVA">RELATIVA</option>
                     </select>
@@ -43,7 +42,6 @@
                 <td><label for="clima_attuale">Clima Attuale:</label></td>
                 <td>
                     <select id="clima_attuale" name="clima_attuale" required>
-                        <option value="">Seleziona...</option>
                         <option value="PIOGGIA">PIOGGIA</option>
                         <option value="SERENO">SERENO</option>
                         <option value="VENTOSO">VENTOSO</option>

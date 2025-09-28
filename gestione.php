@@ -1,25 +1,21 @@
 <?php
-
+    $localita = $_POST['localita'];
+    $data = $_POST['data'];
+    $temp_min = $_POST['temperatura_min'];
+    $temp_max = $_POST['temperatura_max'];
+    $umidita = $_POST['umidita'];
+    $valore_umidita = $_POST['valore_umidita'];
+    $clima = $_POST['clima_attuale'];
 ?>
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Dati Temperature Registrate</title>
 </head>
 <body>
     <h1>Dati Temperature Registrate</h1>
     
     <?php
-    if ($_POST) {
-        $localita = $_POST['localita'];
-        $data = $_POST['data'];
-        $temp_min = $_POST['temperatura_min'];
-        $temp_max = $_POST['temperatura_max'];
-        $umidita = $_POST['umidita'];
-        $valore_umidita = $_POST['valore_umidita'];
-        $clima = $_POST['clima_attuale'];
-        
         echo "<h2>Riepilogo Dati Meteorologici</h2>";
         echo "<table border='1'>";
         echo "<tr><th>Campo</th><th>Valore</th></tr>";
@@ -33,7 +29,7 @@
         echo "<tr><td><strong>Clima Attuale</strong></td><td>$clima</td></tr>";
         echo "</table>";
         
-        // Analisi delle condizioni
+        
         echo "<h3>Analisi Condizioni</h3>";
         echo "<ul>";
         
@@ -60,10 +56,6 @@
         }
         
         echo "</ul>";
-        
-    } else {
-        echo "<p>Nessun dato ricevuto. <a href='form.html'>Torna al form</a></p>";
-    }
     ?>
     
     <br>
